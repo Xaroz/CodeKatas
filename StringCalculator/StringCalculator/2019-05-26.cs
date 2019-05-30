@@ -3,9 +3,9 @@ using System.Collections.Generic;
 
 namespace CodeKatas
 {
-    class Program
+    public class Day1
     {
-        static string add(params string [] numbers)
+        public string Add(params string [] numbers)
         {
             double sum = 0;
             foreach (string number in numbers)
@@ -47,15 +47,6 @@ namespace CodeKatas
             return ans;
         }
 
-        static void Main(string[] args)
-        {
 
-            string test1 = "//sep\n2sep3";
-
-            string test2 = "";
-            string test3 = "2.2,2.4\n4,";
-            Console.WriteLine(add(test1,test2,test3));
-            Console.Read();
-        }
     }
 }

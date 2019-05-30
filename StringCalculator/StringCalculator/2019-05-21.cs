@@ -3,9 +3,9 @@ using System.Collections.Generic;
 
 namespace _2019_05_21
 {
-    class Program
+    public class Day2
     {
-        static string add(params string [] list)
+        public string add(params string [] list)
         {
             int sum = 0;
             foreach(string number in list)
@@ -41,16 +41,6 @@ namespace _2019_05_21
             }          
             string ans = Convert.ToString(sum);
             return ans;
-        }
-
-        static void Main(string[] args)
-        {
-            string test = "//;\n1;2";
-            string test2 = "12,3,4,\n4";
-            string ans = add(test, test2);
-            Console.WriteLine(ans);
-            Console.WriteLine("//sep\n");
-            Console.Read();
         }
     }
 }

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace _2019_05_20
 {
-    class Program
+    public class Day3
     {
         static string add(params string [] list_numbers)
         {
