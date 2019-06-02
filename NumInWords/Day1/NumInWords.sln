@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.329
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NumInWords", "NumInWords\NumInWords.csproj", "{69C132BC-4E10-4F67-B9CD-1836BC39FD4B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NumInWords", "NumInWords\NumInWords.csproj", "{69C132BC-4E10-4F67-B9CD-1836BC39FD4B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTest", "UnitTest\UnitTest.csproj", "{9A2CAF99-C29E-4C24-AD10-C60BE737B757}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnitTest", "UnitTest\UnitTest.csproj", "{9A2CAF99-C29E-4C24-AD10-C60BE737B757}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
