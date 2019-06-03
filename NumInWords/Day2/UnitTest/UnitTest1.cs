@@ -140,5 +140,86 @@ namespace Tests
             string result = convert.Transform(number);
             Assert.AreEqual("eight hundred and fifty seven", result);
         }
+
+        [Test]
+        public void With1000_Returnsone_thousand()
+        {
+            Converter convert = new Converter();
+            int number = 1000;
+            string result = convert.Transform(number);
+            Assert.AreEqual("one thousand", result);
+        }
+
+        [Test]
+        public void With3000_Returnsthree_thousand()
+        {
+            Converter convert = new Converter();
+            int number = 3000;
+            string result = convert.Transform(number);
+            Assert.AreEqual("three thousand", result);
+        }
+
+        [Test]
+        public void With3562_Returnsthree_thousand_five_hundred_and_sixty_two()
+        {
+            Converter convert = new Converter();
+            int number = 3562;
+            string result = convert.Transform(number);
+            Assert.AreEqual("three thousand five hundred and sixty two", result);
+        }
+
+        [Test]
+        public void With9999_Returnsnine_thousand_nine_hundred_and_ninety_nine()
+        {
+            Converter convert = new Converter();
+            int number = 9999;
+            string result = convert.Transform(number);
+            Assert.AreEqual("nine thousand nine hundred and ninety nine", result);
+        }
+
+        [Test]
+        public void With9099_Returnsnine_thousand_and_ninety_nine()
+        {
+            Converter convert = new Converter();
+            int number = 9099;
+            string result = convert.Transform(number);
+            Assert.AreEqual("nine thousand and ninety nine", result);
+        }
+
+        [Test]
+        public void With9009_Returnsnine_thousand_and_nine()
+        {
+            Converter convert = new Converter();
+            int number = 9009;
+            string result = convert.Transform(number);
+            Assert.AreEqual("nine thousand and nine", result);
+        }
+
+        [Test]
+        public void With8709_Returnseight_thousand_seven_hundred_and_nine()
+        {
+            Converter convert = new Converter();
+            int number = 8709;
+            string result = convert.Transform(number);
+            Assert.AreEqual("eight thousand seven hundred and nine", result);
+        }
+
+        [Test]
+        public void With8019_Returnseight_thousand_and_nineteen()
+        {
+            Converter convert = new Converter();
+            int number = 8019;
+            string result = convert.Transform(number);
+            Assert.AreEqual("eight thousand and nineteen", result);
+        }
+
+        [Test]
+        public void With8009_Returnseight_thousand_and_nine()
+        {
+            Converter convert = new Converter();
+            int number = 8009;
+            string result = convert.Transform(number);
+            Assert.AreEqual("eight thousand and nine", result);
+        }
     }
 }

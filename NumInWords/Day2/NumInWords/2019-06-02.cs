@@ -8,6 +8,8 @@ namespace NumInWords
     {
         string result = "";
         Dictionary<int, string> words = new Dictionary<int, string>();
+        bool and_used = false;
+        int counter = 0;
         public Converter()
         {
             FillDictionary();
@@ -53,6 +55,11 @@ namespace NumInWords
             //example 21
             int remainder = (number % 10);
             int tmp = number - remainder;
+            if (and_used == false && counter > 0)
+            {
+                result += "and ";
+                and_used = true;
+            }
             result += words[tmp];
             result += " ";
             number -= tmp;
@@ -72,6 +79,26 @@ namespace NumInWords
             else
             {
                 result += " and ";
+                and_used = true;
+                counter++;
+                Transform(remainder);
+            }
+        }
+
+        private void FourDigits(int number)
+        {
+            int front_number = number / 1000;
+            result += words[front_number];
+            result += " thousand";
+            int remainder = number - (front_number * 1000);
+            counter++;
+            if (remainder == 0)
+            {
+                return;
+            }
+            else
+            {
+                result += " ";
                 Transform(remainder);
             }
         }
@@ -80,20 +107,22 @@ namespace NumInWords
         {         
             if (words.ContainsKey(number))
             {
-               return result += words[number];
+                if (and_used == false && counter > 0)
+                {
+                    result += "and ";
+                    and_used = true;
+                }
+                return result += words[number];
             }
             else
             {
                 string x = Convert.ToString(number);
                 if (x.Length == 2)
-                {
                     TwoDigits(number);
-                }
                 else if (x.Length == 3)
-                {
                     ThreeDigits(number);
-                }
-                
+                else if (x.Length == 4)
+                    FourDigits(number);
             }
             return result;
             
